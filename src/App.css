@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+}
+
+body{
+  font-family: 'Figtree', sans-serif;
+  background-color: #55E9BC;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 50px auto;
+}
+
+.box{
+  height: 100px;
+  width: 100px;
+  background-color:#2cc496;
+  /* color:  #FFFCCA; */
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 20px;
+}
+
+h1{
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #0f8461;
+}

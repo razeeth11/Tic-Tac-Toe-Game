@@ -5,17 +5,7 @@ import Confetti from "react-confetti";
 
 export function App() {
   const { width, height } = useWindowSize();
-  const [box, setBox] = useState([
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  const [box, setBox] = useState(Array(9).fill(null));
   const [state, setState] = useState(true);
   function handleClick(index) {
     if (!winner) {
@@ -75,7 +65,7 @@ export function App() {
         {!winner ? (
           <button
             onClick={() =>
-              setBox([null, null, null, null, null, null, null, null, null])
+              setBox(Array(9).fill(null))
             }
           >
             Retry
@@ -84,7 +74,7 @@ export function App() {
         {winner ? (
           <button
             onClick={() =>
-              setBox([null, null, null, null, null, null, null, null, null])
+              setBox(Array(9).fill(null))
             }
           >
             {winner ? "Play Again" : "Retry"}

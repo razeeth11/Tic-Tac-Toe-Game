@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 export function App() {
+  const { width, height } = useWindowSize();
   const [box, setBox] = useState([
     null,
     null,
@@ -17,7 +20,7 @@ export function App() {
   function handleClick(index) {
     if (!winner) {
       const boardCopy = [...box];
-      if(boardCopy[index] == null){
+      if (boardCopy[index] == null) {
         boardCopy[index] = state ? "X" : "O";
         setState(!state);
       }
@@ -55,6 +58,7 @@ export function App() {
 
   return (
     <div className="App">
+      {winner ? <Confetti width={width} height={height}/> :null }
       <h1>Tic Tac Toe</h1>
       <div className="boxes">
         {box.map((box, index) => (
@@ -68,7 +72,7 @@ export function App() {
         </h2>
       </div>
       <div className="but">
-      {!winner ? (
+        {!winner ? (
           <button
             onClick={() =>
               setBox([null, null, null, null, null, null, null, null, null])

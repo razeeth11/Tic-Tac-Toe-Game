@@ -40,3 +40,26 @@ h1{
   letter-spacing: 2px;
   color: #0f8461;
 }
+
+.result{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+} 
+
+.but{
+  display: flex;
+  align-items: center;
+}
+
+button{
+  padding: 10px 20px;
+  border: none;
+  background-color: #0f8461;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}

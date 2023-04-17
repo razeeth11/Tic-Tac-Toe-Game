@@ -58,7 +58,7 @@ export function App() {
       <div className="result">
         {winner ? null : <h2>{state ? "X" : "O"} - Turns</h2>}
         <h2>
-          The Winner is : <span style={style}>{winner}</span>
+          The Winner is : {winner}
         </h2>
       </div>
       <div className="but">
@@ -87,7 +87,7 @@ export function App() {
 
 export function Box({ box, onPlayerClick }) {
   const style = {
-    color: box == "X" ? "rgb(84, 84, 84)" : "#FFFCCA",
+    color: box == "X" ? "white" : "#2d2d2d",
   };
 
   return (

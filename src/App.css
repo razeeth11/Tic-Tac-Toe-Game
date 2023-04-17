@@ -4,22 +4,25 @@
 
 body{
   font-family: 'Figtree', sans-serif;
-  background-color: #55E9BC;
+  background-image: url("https://wallpapercave.com/wp/wp3621208.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+
 }
 
 .App{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
-  margin: 50px auto;
+  margin: 5% auto auto 5%;
 }
 
 .box{
   height: 100px;
   width: 100px;
-  background-color:#2cc496;
-  /* color:  #FFFCCA; */
+  background-color:#25a881;
   cursor: pointer;
   border-radius: 5px;
   display: flex;
@@ -38,13 +41,14 @@ body{
 h1{
   font-size: 36px;
   letter-spacing: 2px;
-  color: #0f8461;
+  color: #8bf5d5;
 }
 
 .result{
   display: flex;
   justify-content: center;
   gap: 60px;
+  color: #0f8461;
 } 
 
 .but{
